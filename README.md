@@ -4,5 +4,6 @@ Image Captioning is the system of producing a textual description for given imag
 To build this system we followed following architecture where we maintain 2 repositories one of image and other of images's corresponding captions. We pass images and captions through image and language pipeline respectively. Image pipeline is basically a 2 step process of resizing image to 224x224 image and passing it through Resnet50 model to generate feature vectors. In language pipeline, we pass captions and first preprocess them to produce all lower case text, add suffix and prefixes as well. Then captions are passed through RNN models to generate word embeddings and thus feature vectors. Both image and caption feature vectors are then passed through LSTM architecture to build a model.
 
 Once model developed, the site is build on Flask framework which is a light-weight python framework.
+Download dataset from https://www.kaggle.com/datasets/srbhshinde/flickr8k-sau run train.py using python3 train.py
 
 
